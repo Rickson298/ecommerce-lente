@@ -13,6 +13,12 @@ export default defineConfig({
         new URL("./src/shared/styles", import.meta.url)
       ),
       "@hooks": fileURLToPath(new URL("./src/shared/hooks", import.meta.url)),
+      "@content-page": fileURLToPath(
+        new URL("./src/content-page", import.meta.url)
+      ),
+      "@constants": fileURLToPath(
+        new URL("./src/shared/contants", import.meta.url)
+      ),
       "@components": fileURLToPath(
         new URL("./src/components", import.meta.url)
       ),

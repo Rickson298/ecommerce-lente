@@ -1,14 +1,44 @@
 import { StyledHeader } from "./styles";
+import { CiShoppingCart } from "react-icons/ci";
+import { IoIosArrowBack } from "react-icons/io";
+import { useCart } from "@shared/hooks/use-cart";
+import { Link, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import { linkAnimation } from "./animationts";
 
 export function Header() {
+  const { cart } = useCart();
+
+  const { pathname } = useLocation();
+
+  const isInCartPage = pathname === "/cart";
+
   return (
-    <StyledHeader>
+    <StyledHeader isInCartPage={isInCartPage}>
       <main>
-        <img src="https://assets.change.org/photos/1/pj/wl/LUPjwLkmxgHCUQM-1600x900-noPad.jpg?1592953640" />
-        <ul>
-          <li>Miopia</li>
-          <li>Astigmatismo</li>
-        </ul>
+        <span className="company_name">IRIS CORPORATION</span>
+        {/* <nav className="links">
+          <ul className="lens">
+            <li>Miopia</li>
+            <li>Astigmatismo</li>
+          </ul>
+        </nav> */}
+        <Link className="link_cart" to={isInCartPage ? "/" : "/cart"}>
+          <AnimatePresence mode="wait">
+            {!isInCartPage && cart.total_items > 0 ? (
+              <motion.div key="cart_icon" {...linkAnimation}>
+                <div className="counter_items">{cart.total_items}</div>
+                <CiShoppingCart size="40px" />
+              </motion.div>
+            ) : (
+              isInCartPage && (
+                <motion.div key="back_icon" {...linkAnimation}>
+                  <IoIosArrowBack size="40px" />
+                </motion.div>
+              )
+            )}
+          </AnimatePresence>
+        </Link>
       </main>
     </StyledHeader>
   );

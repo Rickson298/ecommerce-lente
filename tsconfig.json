@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".",
+    "lib": ["dom", "dom.iterable", "esnext", "es5"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -17,17 +17,17 @@
     "incremental": true,
     "paths": {
       "@components/*": ["src/components/*"],
+      "@content-page/*": ["src/content-page/*"],
       "@shared/*": ["src/shared/*"],
       "@hooks/*": ["src/shared/hooks/*"],
       "@contexts": ["src/shared/contexts/*"],
       "@utils/*": ["src/shared/utils/*"],
       "@types/*": ["src/shared/types/*"],
       "@styles/*": ["src/shared/styles/*"],
-      "@global-styles/*": ["src/shared/styles/*"],
       "@configs/*": ["src/shared/configs/*"],
       "@services/*": ["src/shared/services/*"],
       "@templates/*": ["src/templates/*"],
-      "@package": ["./package.json"]
+      "@global-styles/*": ["src/shared/styles/*"]
     }
   },
   "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx"],

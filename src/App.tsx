@@ -20,7 +20,14 @@ function App() {
       >
         <div>
           <Header />
-          <div style={{ padding: "2rem", marginTop: "10vh" }}>
+          <div
+            style={{
+              padding: "1rem",
+              marginTop: "10vh",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <Routes>
               <Route path="/" element={<MainLayout />} />
               <Route path="/cart" element={<CartPage />} />

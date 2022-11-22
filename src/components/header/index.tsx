@@ -17,12 +17,7 @@ export function Header() {
     <StyledHeader isInCartPage={isInCartPage}>
       <main>
         <span className="company_name">IRIS CORPORATION</span>
-        {/* <nav className="links">
-          <ul className="lens">
-            <li>Miopia</li>
-            <li>Astigmatismo</li>
-          </ul>
-        </nav> */}
+
         <Link className="link_cart" to={isInCartPage ? "/" : "/cart"}>
           <AnimatePresence mode="wait">
             {!isInCartPage && cart.total_items > 0 ? (

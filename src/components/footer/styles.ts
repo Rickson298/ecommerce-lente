@@ -6,8 +6,22 @@ export const PaymentMethods = styled.div`
   min-height: 80px;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   color: var(--neutral5);
+
+  @media (min-width: 768px) {
+    gap: 0.5rem;
+  }
+
+  .container_icons_payments {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const FooterContainer = styled.footer`

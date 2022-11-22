@@ -19,7 +19,7 @@ export const ContainerMainLayout = styled(motion.div)`
   .cards {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
   }

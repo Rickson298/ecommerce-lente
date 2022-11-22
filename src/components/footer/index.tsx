@@ -8,10 +8,12 @@ export function Footer() {
     <FooterContainer>
       <PaymentMethods>
         Formas de pagamento
-        <SiNubank size="35px" />
-        <RiMastercardFill size="35px" />
-        <RiVisaLine size="35px" />
-        <BsPaypal size="25px" />
+        <div className="container_icons_payments">
+          <SiNubank size="35px" />
+          <RiMastercardFill size="35px" />
+          <RiVisaLine size="35px" />
+          <BsPaypal size="25px" />
+        </div>
       </PaymentMethods>
       <span>
         Iris Corporation ® - TODOS OS DIREITOS RESERVADOS - OS PREÇOS E

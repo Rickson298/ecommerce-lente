@@ -93,5 +93,9 @@ export const StyledHeader = styled.header<{
         }
       }
     }
+
+    @media (max-width: 968px) {
+      padding-inline: 1rem;
+    }
   }
 `;

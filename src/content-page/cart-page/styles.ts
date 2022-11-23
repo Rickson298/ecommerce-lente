@@ -53,6 +53,8 @@ export const CartContainer = styled(motion.div)`
     color: var(--neutral4);
   }
 
+  width: 100%;
+
   .container_total_price {
     display: flex;
     gap: 0.5rem;

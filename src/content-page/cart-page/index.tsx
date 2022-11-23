@@ -1,5 +1,7 @@
 import { useCart } from "@shared/hooks/use-cart";
 import { formatCurrency } from "@shared/utils/formatters/format-currency";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { cartPageAnimation } from "./animation";
 import { CartContainer, CartItem } from "./styles";
 
@@ -9,6 +11,14 @@ export default function CartPage() {
   const totalPriceCart = cart.items.reduce((accumulator, current) => {
     return accumulator + current.price * current.quantity;
   }, 0);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!cart.total_items) {
+      navigate("/");
+    }
+  }, [cart]);
 
   return (
     <CartContainer {...cartPageAnimation}>

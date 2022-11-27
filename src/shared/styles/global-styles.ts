@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: var(--white);
+    background: linear-gradient(90deg, white, #e8d8ff60);
     font-family: Open-Sans, Helvetica, Sans-Serif;
   }
 
@@ -31,7 +31,7 @@ export const GlobalStyle = createGlobalStyle`
     width:8px
   }
   body::-webkit-scrollbar-thumb{
-    background: #1889BC50;
+    background: #abbeff;
     border-radius: 0.5rem;
   }
   
@@ -56,15 +56,32 @@ export const GlobalStyle = createGlobalStyle`
     border:none;
     padding:1rem 1.5rem;
     cursor:pointer;
-    transition:all ease 0.2s
+    transition:all ease 0.2s;
+    border-radius: 0.5rem;
+    position: relative;
+    z-index: 1;
+    background: #b7d5ac;
+    color:white !important;
+    overflow: hidden;
   }
 
   button:disabled{
-    filter:brightness(80%)
-
+    filter:brightness(80%);
   }
 
-  button:hover{
-    filter:brightness(80%)
+  button:hover::after{
+    width: 100%;
+  }
+  button:after{
+    content: '';
+    height: 100%;
+    position: absolute;
+    width:0%;
+    left: 0;
+    top: 0;
+    border-radius: 0.5rem;
+    z-index: -1;
+    background: #93bf85;
+    transition: all ease 0.2s;
   }
 `;

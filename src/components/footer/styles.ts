@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const PaymentMethods = styled.div`
-  background: var(--neutral1);
+  background: #abbeff;
   display: flex;
   min-height: 80px;
   justify-content: center;
   align-items: center;
-  color: var(--neutral5);
+  color: var(--black);
 
   @media (min-width: 768px) {
     gap: 0.5rem;

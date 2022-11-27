@@ -4,7 +4,7 @@ export const StyledHeader = styled.header<{
   isInCartPage: boolean;
 }>`
   background: linear-gradient(90deg, #abbeff, #8980ff, #8980ff, #abbeff);
-
+  z-index: 9999;
   position: fixed;
   width: 100%;
   height: 10vh;

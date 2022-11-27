@@ -13,6 +13,7 @@ export function CardLens(props: CardLensProps) {
         <span className="product_title">{props.name}</span>
         <span>{props.description}</span>
       </div>
+      <img className="lens" src={props.url_image} />
       <div className="prices">
         <del className="price">
           {formatCurrency({ amount: props.old_price })}
@@ -26,7 +27,9 @@ export function CardLens(props: CardLensProps) {
         </span>
         <span>ou {formatCurrency({ amount: props.price })} à vista</span>
       </div>
-      <button onClick={() => updateCart(props)}>Adicionar ao carrinho</button>
+      <button style={{ marginTop: "auto" }} onClick={() => updateCart(props)}>
+        Adicionar ao carrinho
+      </button>
     </CardContainer>
   );
 }

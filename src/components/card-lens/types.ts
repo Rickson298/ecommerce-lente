@@ -7,4 +7,5 @@ export type CardLensProps = {
   unit_installment_price: number;
   price: number;
   id: number;
+  url_image: string;
 };

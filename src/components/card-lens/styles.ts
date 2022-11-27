@@ -7,11 +7,16 @@ export const CardContainer = styled(motion.div)`
     color: var(--neutral5);
   }
 
+  .lens {
+    border-radius: 0.25rem;
+  }
+
+  border-radius: 0.5rem;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  max-height: 350px;
+  min-height: 450px;
   width: 100%;
   border: 1px solid var(--neutral2);
   gap: 3rem;
@@ -43,4 +48,5 @@ export const CardContainer = styled(motion.div)`
   &:hover {
     border-color: var(--blue);
   }
+  box-shadow: 0px 0px 4px 2px var(--neutral1);
 `;

@@ -24,18 +24,21 @@ export default function CartPage() {
     <CartContainer {...cartPageAnimation}>
       {cart.items.map((item, index) => (
         <CartItem key={index}>
-          <span>{item.name}</span>
-          <span>{item.description}</span>
-          <footer>
-            <div className="container_buttons">
-              <button onClick={() => updateCart(item)}>+</button>
-              {item.quantity}
-              <button onClick={() => decreaseCart(item)}>-</button>
-            </div>
-            <span className="price">
-              {formatCurrency({ amount: item.price * item.quantity })}
-            </span>
-          </footer>
+          <img src={item.url_image} />
+          <div className="container_product_infos">
+            <span>{item.name}</span>
+            <span>{item.description}</span>
+            <footer>
+              <div className="container_buttons">
+                <button onClick={() => updateCart(item)}>+</button>
+                {item.quantity}
+                <button onClick={() => decreaseCart(item)}>-</button>
+                <span className="price">
+                  {formatCurrency({ amount: item.price * item.quantity })}
+                </span>
+              </div>
+            </footer>
+          </div>
         </CartItem>
       ))}
       <div className="container_total_price">

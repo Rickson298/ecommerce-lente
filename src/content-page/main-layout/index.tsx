@@ -11,10 +11,7 @@ import { ContainerMainLayout } from "./styles";
 export default function MainLayout() {
   return (
     <ContainerMainLayout>
-      <motion.img
-        src="https://recursos.newlentes.com.br/MediaCenter/Categoria_Lentes-de-Contato_17112022-2.jpg"
-        {...imgAnimation}
-      />
+      <motion.img src="images/black-friday.webp" {...imgAnimation} />
       <motion.div
         className="cards"
         variants={containerItemsVariants}

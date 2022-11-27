@@ -6,7 +6,7 @@ export const products = [
     old_price: 676.65,
     newest_price: 590.99,
     installments: 5,
-    unit_installment_price: 188.19,
+    unit_installment_price: 118.19,
     price: 550.49,
     url_image:
       "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSGxaoBJYibBfQEyb0FrYg9qkj4CjsaqYOkZb1h2IWAWgNIxdLf",
